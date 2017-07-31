@@ -28,16 +28,13 @@ AUTH_TOKEN: <auth token output>
 
 1. Get the custom python script: `dcos_verify_token.py`
 
-2. Execute `python dcos_verify_token.py <master url> <dcos_auth_token>`. Example:
+2. Execute `python dcos_verify_token.py <master url> <dcos_auth_token>`. 
 
-   ```
-python dcos_verify_token.py m1.dcos.com <auth token output>
-   ``` 
+   Example: `python dcos_verify_token.py m1.dcos.com <auth token output>`
 
-3. Verify the token expiration from the output: `expiration is: 2017-05-01 09:06:44`. Note that DC/OS default expiration is 5 days. To increase it you might need to set the default expiration at `/opt/mesosphere/etc/bouncer-config.json` and do a `systemctl restart dcos-bouncer`
+3. Verify the token expiration from the output: `expiration is: 2017-05-01 09:06:44`. Note that DC/OS default expiration is 5 days. To increase it you might need to set the default expiration `EXPIRATION_AUTH_TOKEN_DAYS` at `/opt/mesosphere/etc/bouncer-config.json` and do a `systemctl restart dcos-bouncer`
 
-   ```
-    "EXPIRATION_AUTH_TOKEN_DAYS": 5
-   ```
+
+   
 
 

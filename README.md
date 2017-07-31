@@ -37,7 +37,7 @@ python dcos_verify_token.py m1.dcos.com <auth token output>
 3. Verify the token expiration from the output: `expiration is: 2017-05-01 09:06:44`. Note that DC/OS default expiration is 5 days. To increase it you might need to set the default expiration at `/opt/mesosphere/etc/bouncer-config.json` and do a `systemctl restart dcos-bouncer`
 
    ```
- "EXPIRATION_AUTH_TOKEN_DAYS": 5,
+    "EXPIRATION_AUTH_TOKEN_DAYS": 5
    ```
 
 
